@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NANI WEB</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <h2>Cargando...</h2>
+        </div>
+    </div>
+    <div id="menu_item">
+    </div>
+    <div id="commands-container">
+        <div id="action-window">
+            <div id="output"></div>
+        </div>
+        <div id="error" class="d-none"></div>
+        <input type="text" id="command" placeholder="Command">
+        <button id="send">Send</button>
+
+        <button onclick="action('look');">Look Room</button>
+        <button onclick="action('inventory');">Inventory</button>
+        <button onclick="action('turn_on');">Turn ON</button>
+        <button onclick="action('turn_off');">Turn OFF</button>
+        <button onclick="action('help');">MORE!</button>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="prolog.js"></script>
+</body>
+</html>
